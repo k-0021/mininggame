@@ -6,17 +6,20 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+/**
+ * プレイヤーのスコア情報を扱うオブジェクト
+ * DBに存在するテーブルと連動する
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor
 public class PlayerScore {
     private int id;
-    private int count;
     private int score;
-    private LocalDateTime registered_at;
+    private LocalDateTime registeredAt;
 
-    public PlayerScore(int count,int score) {
-        this.count = count;
+    public PlayerScore(int score) {
         this.score = score;
     }
 }

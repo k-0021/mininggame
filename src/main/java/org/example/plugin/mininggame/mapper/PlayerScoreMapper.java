@@ -11,6 +11,6 @@ public interface PlayerScoreMapper {
     @Select("select * from player_score3")
     List<PlayerScore> selectList();
 
-    @Insert("insert player_score3(count, score, registered_at) values (#{count}, #{score}, now())")
+    @Insert("insert player_score3(score, registered_at) values (#{score}, now())")
     int insert(PlayerScore playerScore);
 }

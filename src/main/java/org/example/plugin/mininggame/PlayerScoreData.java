@@ -10,6 +10,9 @@ import org.example.plugin.mininggame.mapper.data.PlayerScore;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * DB接続やそれに付随する登録や更新処理を行うクラス
+ */
 public class PlayerScoreData {
     private final SqlSessionFactory sqlSessionFactory;
 
@@ -22,6 +25,10 @@ public class PlayerScoreData {
         }
     }
 
+    /**
+     * プレイヤースコアテーブルから一覧でスコア情報を取得する
+     * @return スコア情報の一覧
+     */
     public List<PlayerScore> selectList() {
         try (SqlSession session = sqlSessionFactory.openSession()) {
             PlayerScoreMapper mapper = session.getMapper(PlayerScoreMapper.class);
@@ -29,6 +36,10 @@ public class PlayerScoreData {
         }
     }
 
+    /**
+     * プレイヤースコアテーブルにスコア情報を登録する
+     * @param playerScore プレイヤーのスコア情報
+     */
     public void insert(PlayerScore playerScore) {
         try (SqlSession session =  sqlSessionFactory.openSession(true)) {
             PlayerScoreMapper mapper = session.getMapper(PlayerScoreMapper.class);

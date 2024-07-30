@@ -7,7 +7,6 @@ import org.example.plugin.mininggame.command.MiningGameCommand;
 public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
-        // Plugin startup logic
         MiningGameCommand miningGameCommand = new MiningGameCommand(this);
         Bukkit.getPluginManager().registerEvents(miningGameCommand, this);
         getCommand("miningGame").setExecutor(miningGameCommand);
