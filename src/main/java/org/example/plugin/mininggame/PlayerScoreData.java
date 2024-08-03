@@ -27,6 +27,7 @@ public class PlayerScoreData {
 
     /**
      * プレイヤースコアテーブルから一覧でスコア情報を取得する
+     *
      * @return スコア情報の一覧
      */
     public List<PlayerScore> selectList() {
@@ -38,10 +39,11 @@ public class PlayerScoreData {
 
     /**
      * プレイヤースコアテーブルにスコア情報を登録する
+     *
      * @param playerScore プレイヤーのスコア情報
      */
     public void insert(PlayerScore playerScore) {
-        try (SqlSession session =  sqlSessionFactory.openSession(true)) {
+        try (SqlSession session = sqlSessionFactory.openSession(true)) {
             PlayerScoreMapper mapper = session.getMapper(PlayerScoreMapper.class);
             mapper.insert(playerScore);
         }

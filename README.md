@@ -1,2 +1,3 @@
 # mininggame
+
 ミニゲーム開発
