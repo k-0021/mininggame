@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
  */
 @Setter
 @Getter
-public class ExcutingPlayer {
+public class ExecutingPlayer {
     private Player player;
     private int score;
     private long gameTime;
 
-    public ExcutingPlayer(Player player) {
+    public ExecutingPlayer(Player player) {
         this.player = player;
     }
 }

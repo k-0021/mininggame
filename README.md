@@ -45,3 +45,4 @@ CREATE TABLE  player_score3(id int auto_increment, score int, registered_at date
 - Spigot：1.20.1
   
 ※動作確認はWindowsのみ実施
+
